@@ -1,9 +1,13 @@
 {
     "scripts": {
         "start": "node index.js",
-        "test": "mocha"
+        "test": "nyc --reporter=html --reporter=text --reporter=text-lcov --reporter=lcov mocha --timeout=3000",
+        "sonar": "sonar-scanner",
+        "jenkins": "npm run test; npm run sonar"
     },
-    "dependencies": {
-        "mocha": "^3.5.0"
+    "devDependencies": {
+        "mocha": "^3.5.0",
+        "nyc": "^13.1.0",
+        "sonar-scanner": "^3.1.0"
     }
 }
