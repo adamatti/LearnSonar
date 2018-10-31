@@ -1,0 +1,16 @@
+.idea/
+.gradle/
+.nyc_output/
+.scannerwork/
+
+target/
+build/
+out/
+node_modules/
+coverage/
+
+*.iml
+*.ipr
+*.iws
+shrinkwrap.yaml
+package-lock.json

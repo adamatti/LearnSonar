@@ -1,10 +1,7 @@
 .DEFAULT_GOAL := help
 
-test: ## Run tests
-	mvn clean test
-
-run: ## Run Java App
-	mvn clean package exec:java
+deps: ## start dependencies. E.g: postgre, sonar
+	docker-compose up -d
 
 .PHONY: help
 help: ## show this help
