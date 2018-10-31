@@ -1,5 +1,5 @@
 const assert = require('assert'),
-      fizzBuzz = require("../fizzBuzz")
+      fizzBuzz = require("../src/fizzBuzz")
 ;
 
 describe('Test fizzBuzz', () => {
@@ -13,5 +13,9 @@ describe('Test fizzBuzz', () => {
 
     it('Should return FizzBuzz', () => {
         assert.equal("FizzBuzz",fizzBuzz(15))
+    })
+
+    it('Should return 2', () => {
+        assert.equal("2",fizzBuzz(2))
     })
 })
