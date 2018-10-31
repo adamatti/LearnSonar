@@ -4,7 +4,7 @@
         "test": "nyc --reporter=html --reporter=text --reporter=text-lcov --reporter=lcov mocha --timeout=3000",
         "sonar": "sonar-scanner",
         "mutation-test": "stryker run",
-        "jenkins": "npm run test; npm run mutation-test; npm run sonar"
+        "jenkins": "npm run test && npm run mutation-test && npm run sonar"
     },
     "devDependencies": {
         "mocha": "^3.5.0",

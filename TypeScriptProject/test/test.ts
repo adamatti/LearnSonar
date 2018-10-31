@@ -1,5 +1,5 @@
 import * as assert from 'assert';
-import fizzBuzz from "../fizzBuzz";
+import fizzBuzz from "../src/fizzBuzz";
 
 describe('Test fizzBuzz', () => {
     it('Should return fizz', () => {
@@ -12,5 +12,9 @@ describe('Test fizzBuzz', () => {
 
     it('Should return FizzBuzz', () => {
         assert.equal("FizzBuzz",fizzBuzz(15))
+    })
+
+    it('Should return 2', () => {
+        assert.equal("2",fizzBuzz(2))
     })
 })

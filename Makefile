@@ -1,5 +1,11 @@
 .DEFAULT_GOAL := help
 
+stop: ## Stop containers
+	docker-compose stop -t 0
+
+rm: stop ## remove containers
+	docker-compose rm -fv 
+
 deps: ## start dependencies. E.g: postgre, sonar
 	docker-compose up -d
 

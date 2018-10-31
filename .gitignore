@@ -2,6 +2,7 @@
 .gradle/
 .nyc_output/
 .scannerwork/
+.stryker-tmp/
 
 target/
 build/
@@ -9,6 +10,7 @@ out/
 node_modules/
 coverage/
 dist/
+reports/
 
 *.iml
 *.ipr
