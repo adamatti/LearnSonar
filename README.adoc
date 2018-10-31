@@ -1,0 +1,16 @@
+Pet project to show how to publish metrics (e.g. code coverage, mutation testing) to https://www.sonarqube.org/[sonar], with different language and tools (e.g. https://www.java.com[java] with https://gradle.org/[gradle] / https://maven.apache.org/[maven], https://nodejs.org[node], https://www.typescriptlang.org/[typescript])
+
+#### How to run
+* Start docker containers: `make deps`
+* Log on http://localhost:9000/admin/marketplace[sonar], install plugins
+
+Then collect metrics and send to sonar:
+
+* for node projects: `npm install` / `npm run jenkins`
+* for gradle projects: `gradle jenkins`
+* for maven project: `make jenkins`
+
+#### Todo
+* Mutation Testing with Gradle + Groovy + Spock
+* sample with integration test (with coverage) 
+* Quality gateways (e.g. break build if coverage < X%)
