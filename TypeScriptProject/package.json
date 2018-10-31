@@ -1,16 +1,37 @@
 {
     "scripts": {
         "start": "./node_modules/.bin/ts-node index.ts",
-        "test": "mocha -r ts-node/register test/*"
+        "test": "nyc mocha -r ts-node/register -r source-map-support/register test/*",
+        "sonar": "sonar-scanner",
+        "jenkins": "npm run test; npm run sonar"
     },
     "dependencies": {
         "ts-node": "^3.3.0",
         "typescript": "^2.4.2"
     },
     "devDependencies": {
+        "@types/chai": "^4.1.7",
+        "@types/mocha": "^5.2.5",
         "assert": "^1.4.1",
         "mocha": "^3.5.0",
-        "@types/chai": "^4.1.7",
-        "@types/mocha": "^5.2.5"
+        "nyc": "^13.1.0",
+        "sonar-scanner": "^3.1.0",
+        "source-map-support": "^0.5.9"
+    },
+    "nyc": {
+        "extension": [
+            ".ts",
+            ".tsx"
+        ],
+        "exclude": [
+            "**/*.d.ts"
+        ],
+        "reporter": [
+            "html",
+            "text",
+            "text-lcov",
+            "lcov"
+        ],
+        "all": true
     }
 }

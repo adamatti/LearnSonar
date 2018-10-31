@@ -8,9 +8,12 @@ build/
 out/
 node_modules/
 coverage/
+dist/
 
 *.iml
 *.ipr
 *.iws
+*.map
+
 shrinkwrap.yaml
 package-lock.json
